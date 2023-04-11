@@ -6,7 +6,7 @@
 
   tasks:
   - name: Test
-    shell: ls /opt/jenkins/workspace/java-pipeline/target/
+    shell: ls
   - name: Copy file
     copy:
       src: /opt/jenkins/workspace/java-pipeline/target/springboot-bootcamp-0.0.1-SNAPSHOT.jar"
