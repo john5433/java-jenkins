@@ -9,6 +9,7 @@
     copy:
       src: $WORKSPACE/target/springboot-bootcamp-0.0.1-SNAPSHOT.jar
       dest: /home/ubuntu
+    remote_src: yes
 
   - name: Running Artifact
     shell: java -jar /home/ubuntu/springboot-bootcamp-0.0.1-SNAPSHOT.jar
