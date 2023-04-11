@@ -1,0 +1,15 @@
+---
+- name: Deploying Artifact
+  hosts: webservers
+  become: yes
+  become_user: root
+
+  tasks:
+  - name: Copy file
+    copy:
+      src: $WORKSPACE/target/springboot-bootcamp-0.0.1-SNAPSHOT.jar
+      dest: /home/ubuntu
+
+  - name: Running Artifact
+    shell: java -jar /home/ubuntu/springboot-bootcamp-0.0.1-SNAPSHOT.jar
+

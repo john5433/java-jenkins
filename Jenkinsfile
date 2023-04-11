@@ -19,5 +19,8 @@ pipeline {
 		sh 'mvn package'
 	}
       }
+       stage('Deploying artifact') {
+           steps {
+               sh 'ansible-playbook --private-key=/home/ubuntu/.ssh/vm-instance-key.pem -i host_inventory deploy-artifact.yml '
     }
 } 
