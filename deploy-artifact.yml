@@ -14,6 +14,7 @@
     copy:
       src: /opt/jenkins/workspace/java-pipeline/target/springboot-bootcamp-0.0.1-SNAPSHOT.jar"
       dest: /home/ubuntu
+    become: true
 
   - name: Running Artifact
     shell: java -jar /home/ubuntu/springboot-bootcamp-0.0.1-SNAPSHOT.jar
